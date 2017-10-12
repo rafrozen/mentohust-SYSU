@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-,root,root,-)
 %{_bindir}/mentohust
-%config %{_sysconfdir}/mentohust.conf
+%config %{_sysconfdir}/mentohust-sysu.conf
 %{_mandir}/man1/mentohust*
 %doc %{_defaultdocdir}/%{name}-%{version}/*
 

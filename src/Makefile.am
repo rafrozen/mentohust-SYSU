@@ -2,7 +2,7 @@ bin_PROGRAMS = mentohust
 
 sysconfdir = /etc
 
-dist_sysconf_DATA = mentohust.conf
+dist_sysconf_DATA = mentohust-sysu.conf
 
 mentohust_SOURCES = myini.c md5.c mycheck.c dlfunc.c myfunc.c mystate.c myconfig.c mentohust.c byte_order.c checkV4.c rjmd5.c rjripemd128.c rjsha1.c rjtiger.c rjtiger_sbox.c rjwhirlpool.c rjwhirlpool_sbox.c
 

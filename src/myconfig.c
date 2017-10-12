@@ -10,8 +10,8 @@
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #else
-static const char *VERSION = "0.3.1";
-static const char *PACKAGE_BUGREPORT = "http://code.google.com/p/mentohust/issues/list";
+static const char *VERSION = "0.4.17";
+static const char *PACKAGE_BUGREPORT = "https://github.com/Placya/mentohust-SYSU/issues";
 #endif
 
 #include "myconfig.h"
@@ -45,9 +45,9 @@ static const char *D_DHCPSCRIPT = "dhcping -v -t 15";	/* 默认DHCP脚本 */
 #else
 static const char *D_DHCPSCRIPT = "dhclient";	/* 默认DHCP脚本 */
 #endif
-static const char *CFG_FILE = "/etc/mentohust.conf";	/* 配置文件 */
-static const char *LOG_FILE = "/tmp/mentohust.log";	/* 日志文件 */
-static const char *LOCK_FILE = "/var/run/mentohust.pid";	/* 锁文件 */
+static const char *CFG_FILE = "/etc/mentohust-sysu.conf";	/* 配置文件 */
+static const char *LOG_FILE = "/tmp/mentohust-sysu.log";	/* 日志文件 */
+static const char *LOCK_FILE = "/var/run/mentohust-sysu.pid";	/* 锁文件 */
 #define LOCKMODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)	/* 创建掩码 */
 
 #ifndef NO_NOTIFY
@@ -205,9 +205,10 @@ void initConfig(int argc, char **argv)
 	int exitFlag = 0;	/* 0Nothing 1退出 2重启 */
 	int daemonMode = D_DAEMONMODE;	/* 是否后台运行 */
 
-	printf(_("\n欢迎使用MentoHUST\t版本: %s\n"
+	printf(_("\n欢迎使用MentoHUST SYSU专版\t版本: %s\n"
 			"Copyright (C) 2009-2010 HustMoon Studio\n"
-			"人到华中大，有甜亦有辣。明德厚学地，求是创新家。\n"
+			"Modified by 2017 Placya Project\n"
+			"博学，审问，慎思，明辨，笃行。\n"
 			"Bug report to %s\n\n"), VERSION, PACKAGE_BUGREPORT);
 	saveFlag = (readFile(&daemonMode)==0 ? 0 : 1);
 	readArg(argc, argv, &saveFlag, &exitFlag, &daemonMode);
