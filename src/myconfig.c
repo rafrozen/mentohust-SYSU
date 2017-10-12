@@ -45,9 +45,9 @@ static const char *D_DHCPSCRIPT = "dhcping -v -t 15";	/* 默认DHCP脚本 */
 #else
 static const char *D_DHCPSCRIPT = "dhclient";	/* 默认DHCP脚本 */
 #endif
-static const char *CFG_FILE = "/etc/mentohust-sysu.conf";	/* 配置文件 */
-static const char *LOG_FILE = "/tmp/mentohust-sysu.log";	/* 日志文件 */
-static const char *LOCK_FILE = "/var/run/mentohust-sysu.pid";	/* 锁文件 */
+static const char *CFG_FILE = "/etc/mentohust-sysu-double.conf";	/* 配置文件 */
+static const char *LOG_FILE = "/tmp/mentohust-sysu-double.log";	/* 日志文件 */
+static const char *LOCK_FILE = "/var/run/mentohust-sysu-double.pid";	/* 锁文件 */
 #define LOCKMODE (S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)	/* 创建掩码 */
 
 #ifndef NO_NOTIFY
@@ -205,7 +205,7 @@ void initConfig(int argc, char **argv)
 	int exitFlag = 0;	/* 0Nothing 1退出 2重启 */
 	int daemonMode = D_DAEMONMODE;	/* 是否后台运行 */
 
-	printf(_("\n欢迎使用MentoHUST SYSU专版\t版本: %s\n"
+	printf(_("\n欢迎使用MentoHUST SYSU Double版\t版本: %s\n"
 			"Copyright (C) 2009-2010 HustMoon Studio\n"
 			"Modified by 2017 Placya Project\n"
 			"博学，审问，慎思，明辨，笃行。\n"
