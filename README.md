@@ -75,4 +75,7 @@ make
 
 并给一个关于东校区的`h3c`的路由器拨号的博客,以及我忘记在那里下载的一个`h3c`的程序
 
+https://blog.terrychan.me/2016/setup-inode-and-ipv6-in-sysu-east-campus
+
+
 [h3c](http://ow3kig4i4.bkt.clouddn.com/github/mentohust/h3c)
